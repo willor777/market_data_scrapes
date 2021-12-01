@@ -9,6 +9,7 @@ import os
 import traceback
 
 
+
 def safe_float_conversion(val: any) -> float:
     """Strips all numerical and extra-numerical ('.' , '-') values from a string and converts to float."""
     if isinstance(val, str):
@@ -33,10 +34,10 @@ def safe_float_conversion(val: any) -> float:
 
 
 def safe_int_conversion(v):
-    if str(type(v)) == str(type(str())):
+    if isinstance(v, str):
         if v[-1].isnumeric():
             return int(v)
-    if str(type(v)) == str(type(int())):
+    if isinstance(v, int):
         return v
     else:
         return 0
