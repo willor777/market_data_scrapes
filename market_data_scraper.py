@@ -11,7 +11,6 @@ import traceback
 
 
 def safe_float_conversion(val: any) -> float:
-    """Strips all numerical and extra-numerical ('.' , '-') values from a string and converts to float."""
     if isinstance(val, str):
 
         acceptable = '1,2,3,4,5,6,7,8,9,0,.,-'.split(',')
@@ -133,12 +132,6 @@ def convert_data_strp_number(value):
 class MarketDataScraper:
 
     def __init__(self):
-        # self.resources_path = os.path.dirname(os.path.abspath(__file__)) + "\\.resources\\"
-        # self.resources_path = Directories.get_path_to_file_dir(__file__) + '\\.resources\\'
-        # self._session = NetworkTools.get_mock_ubuntu_firefox_session()
-
-        # This url is for unusual Call options activity
-
         self._session = requests.Session()
 
         self._marketbeat_unusual_calls_vol_url = \
