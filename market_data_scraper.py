@@ -948,5 +948,4 @@ class WatchlistAndSymbolsHelper:
 
 
 if __name__ == '__main__':
-    w = WatchlistAndSymbolsHelper()
-    print(w.get_watchlist_yf_trending_tickers())
+    pass
